@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/MY-CE/static/css/main.e6c13ad2.css",
+    "main.js": "/MY-CE/static/js/main.bbb84a24.js",
+    "static/media/img.png": "/MY-CE/static/media/img.a521a56f47175665f99d.png",
+    "index.html": "/MY-CE/index.html",
+    "main.e6c13ad2.css.map": "/MY-CE/static/css/main.e6c13ad2.css.map",
+    "main.bbb84a24.js.map": "/MY-CE/static/js/main.bbb84a24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.bbb84a24.js"
+  ]
+}
