@@ -8,15 +8,15 @@ const items = [
     },
     {
         text: 'Academia',
-        href: '/Academia'
+        href: '/academia'
     },
     {
         text: 'Projects',
-        href: '/Projects'
+        href: '/projects'
     },
     {
         text: 'Fun',
-        href: '/Fun'
+        href: '/fun'
     }
 ]
 

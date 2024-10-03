@@ -46,7 +46,7 @@ export const projects = [
       "A project that implements Bayesian networks for probabilistic reasoning and demonstrates D-Separation to infer conditional independence between variables. Useful for machine learning, AI, and decision analysis.",
     image:
       "https://github.com/Arash1381-y/d-separation/assets/79264867/2c7ea45d-4037-469e-92f0-00411ebb88f7", // Replace with an actual screenshot or other image as needed
-    tags: ["Bayesian Networks", "D-Separation", "Probabilistic Modeling", "AI", "React", "JavaScript"],
+    tags: ["Bayesian Networks", "D-Separation", "Probabilistic Modeling", "AI", "React", "JavaScript", "Web Development"],
     links: {
       github: "https://github.com/Arash1381-y/d-separation",
       webpage: "https://arash1381-y.github.io/d-separation",

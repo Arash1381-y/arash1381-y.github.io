@@ -72,8 +72,6 @@ const CustomNavbar = ({ items, name }) => {
   return (
     <AppBar position="static" sx={{ backgroundColor: "primary.main" }}>
       <Container maxWidth="lg">
-        {" "}
-        {/* Ensures consistent width */}
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* Left side (Name) */}
           <Typography
@@ -87,7 +85,7 @@ const CustomNavbar = ({ items, name }) => {
           {/* Right side (Navbar Items) */}
           <div>
             {items.map((item, index) => (
-              <NavbarButton key={index} href={item.href}>
+              <NavbarButton key={index} href={`#${item.href}`}>
                 <Typography variant="button">{item.text}</Typography>
               </NavbarButton>
             ))}
