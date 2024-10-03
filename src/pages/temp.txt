@@ -1,0 +1,99 @@
+import * as React from "react";
+import {
+  Container,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  IconButton,
+  Grid,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+const Item = styled(Card)(({ theme }) => ({
+  backgroundColor: "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "left",
+  color: theme.palette.text.secondary,
+  boxShadow: theme.shadows[3],
+  borderRadius: theme.shape.borderRadius,
+}));
+
+const ProjectTags = styled("div")({
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "0.5rem",
+  marginTop: "0.5rem",
+});
+
+const LinkIcons = styled("div")({
+  display: "flex",
+  gap: "0.5rem",
+  marginTop: "0.5rem",
+});
+
+export default function Projects() {
+  return (
+    <Container maxWidth="lg" sx={{ mt: "2rem" }}>
+      <Typography variant="h4" component="h2" gutterBottom align="center">
+        My Projects
+      </Typography>
+      <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
+        {projects.map((project, index) => (
+          <Item key={index}>
+            <CardMedia
+              component="img"
+              height="200"
+              image={project.image}
+              alt={project.title}
+              sx={{ objectFit: "cover" }}
+            />
+            <CardContent>
+              <Typography variant="h6" component="div" gutterBottom>
+                {project.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {project.description}
+              </Typography>
+
+              {/* Tags */}
+              <ProjectTags>
+                {project.tags.map((tag, idx) => (
+                  <Chip key={idx} label={tag} size="small" />
+                ))}
+              </ProjectTags>
+
+              {/* Links with icons */}
+              <LinkIcons>
+                {project.links.github && (
+                  <IconButton
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    size="small"
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                )}
+                {project.links.webpage && (
+                  <IconButton
+                    href={project.links.webpage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Webpage"
+                    size="small"
+                  >
+                    <LanguageIcon />
+                  </IconButton>
+                )}
+              </LinkIcons>
+            </CardContent>
+          </Item>
+        ))}
+      </Masonry>
+    </Container>
+  );
+}
